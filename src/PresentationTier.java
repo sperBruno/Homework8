@@ -17,10 +17,27 @@ public class PresentationTier {
 	
 	public void start() {
 		
-		/* IMPLEMENT THIS METHOD */
-		showNumberOfBooksInYear();
+		int userOption = 0;
+		do{
+			System.out.println("Choose a method");
+		System.out.println("1. Show Number Of Books In Year");
+		System.out.println("2. Show Book Titles By Author");
+		System.out.println("Enter the number option:");
+		userOption = scanner.nextInt();
+		}while(userOption <= 0 || userOption > 2);
+		switch (userOption) {
+		case 1:
+			showNumberOfBooksInYear();
+			break;
+		case 2:
+			showBookTitlesByAuthor();
+			break;
+		default:
+			break;
+		}
 		
-		showBookTitlesByAuthor();
+		
+		
 	}
 	
 	public void showNumberOfBooksInYear() {
