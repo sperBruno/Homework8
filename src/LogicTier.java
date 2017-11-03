@@ -33,9 +33,10 @@ public class LogicTier {
 		return countStream;
 	}
 
-	public ArrayList<String> findBookTitlesByAuthor(String authorName) {
+	public List<String> findBookTitlesByAuthor(String authorName) {
 		ArrayList<String> listOfTitles = new ArrayList<>();
 		if (authorName.equals(null) || authorName.isEmpty()) {
+			//return null
 			return listOfTitles;
 		}
 		/*

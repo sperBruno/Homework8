@@ -30,6 +30,9 @@ public class DataTier {
 			String sCurrentLine;
 
 			while ((sCurrentLine = br.readLine()) != null) {
+				//use \t \s
+				// have constants
+				//ask for the specifications of the separators
 				String[] lines = sCurrentLine.replaceAll("	", "  ").split("  ");
 				//System.out.println(lines.length);
 				for (String element: lines) {
@@ -41,6 +44,7 @@ public class DataTier {
 					//System.out.println(element);
 					
 				}
+				//remove lines where element null or empty
 				if(lines.length == 3) {
 					String bookName = lines[0].replaceAll("\"", "").replaceAll("#", "");
 					String authorName = lines[1].replaceAll("\"", "");
